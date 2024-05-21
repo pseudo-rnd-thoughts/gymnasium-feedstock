@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/Farama-Foundation/Gymnasium/archive/refs/tags/v{{ version }}a1.tar.gz
-  sha256: ef293c16f289ae0190a5d61e64e84ce2943f4b4da8019d33df0a079f4d6583e3
+  url: https://github.com/Farama-Foundation/Gymnasium/archive/refs/tags/v{{ version }}a2.tar.gz
+  sha256: 8e05eb7b41aaa2c7cd2fca7fc8f380ca38a814a5fdc67d9ce8614e5014c90683
 
 build:
   number: 0
@@ -106,10 +106,10 @@ outputs:
       run:
         - python
         - {{ pin_subpackage('gymnasium', exact=True) }}
-        - shimmy-atari
+        - ale-py
     test:
       commands:
-        - echo "tested in shimmy-atari"
+        - echo "tested in ale-py"
 
   - name: gymnasium-box2d
     requirements:
